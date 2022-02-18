@@ -1,19 +1,20 @@
 <template>
   <div>
-    <el-button type="info" @click="logout">退出</el-button>
+    <el-button type="info" @click="logout"> 退出 </el-button>
   </div>
 </template>
+
+<style lang="less" scoped>
+</style>
 
 <script>
 export default {
   methods: {
     logout() {
+      //清楚token，重定向页面
       window.sessionStorage.clear()
       this.$router.push('/login')
-    }
-  }
+    },
+  },
 }
 </script>
-
-<style lang="less" scoped>
-</style>
